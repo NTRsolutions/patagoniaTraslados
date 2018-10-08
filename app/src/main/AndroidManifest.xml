@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.apreciasoft.admin.patagoniatrasladosremis">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.apreciasoft.mobile.patagoniatrasladosremis">
 
     <uses-feature android:glEsVersion="0x00020000"
                   android:required="true"/>
-
-
-
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -15,18 +13,17 @@
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-
-
     <application
-        android:name="com.apreciasoft.admin.patagoniatrasladosremis.Util.GlovalVar"
+        android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Util.GlovalVar"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
 
 
-        <activity android:name="com.apreciasoft.admin.patagoniatrasladosremis.Activity.indexActivity" android:theme="@style/SplashTheme">
+        <activity android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Activity.indexActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,41 +32,41 @@
 
         </activity>
 
-        <activity android:name="com.apreciasoft.admin.patagoniatrasladosremis.Activity.MainActivity" />
+        <activity android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Activity.MainActivity" />
 
 
 
         <activity
-            android:name="com.apreciasoft.admin.patagoniatrasladosremis.Activity.HomeActivity"
+            android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Activity.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name="com.apreciasoft.admin.patagoniatrasladosremis.Activity.HomeClientActivity"
+            android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Activity.HomeClientActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
         </activity>
 
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Fracments.PaymentCreditCar" />
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Fracments.activity_card" />
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Fracments.RegisterCliente" />
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Fracments.RegisterForm" />
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Fracments.NewFormDriver" />
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Fracments.NewFormClient" />
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Fracments.InfoDetailTravelAc" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Fracments.PaymentCreditCar" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Fracments.activity_card" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Fracments.RegisterCliente" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Fracments.RegisterForm" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Fracments.NewFormDriver" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Fracments.NewFormClient" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Fracments.InfoDetailTravelAc" />
 
-        <activity   android:name="com.apreciasoft.admin.patagoniatrasladosremis.Util.Signature" />
+        <activity   android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Util.Signature" />
 
-        <service android:name="com.apreciasoft.admin.patagoniatrasladosremis.Util.FirebaseNotifactionSevices">
+        <service android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Util.FirebaseNotifactionSevices">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <service android:name="com.apreciasoft.admin.patagoniatrasladosremis.Util.FirebaseInstanceIdSevices">
+        <service android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Util.FirebaseInstanceIdSevices">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -82,9 +79,14 @@
                     android:value="AIzaSyApZ1embZ2bhcI4Ir8NepmyjTfNvGvjUas" />
 
         <service
-            android:name=".Util.ServicesSleep"
+            android:name="com.apreciasoft.mobile.patagoniatrasladosremis.Util.ServicesSleep"
             android:enabled="true"
             android:exported="false" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="49fba1b63755e1ea4cbc0d53acc6b33857d405f1"
+            />
 
     </application>
 
