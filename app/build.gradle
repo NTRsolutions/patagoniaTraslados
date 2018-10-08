@@ -37,8 +37,8 @@ android {
         applicationId 'com.apreciasoft.mobile.patagoniatrasladosremis'
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 15
-        versionName "1.0"
+        versionCode 16
+        versionName "2.0.16"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
@@ -90,7 +90,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "asremis-sancayetano-${variant.name}-${variant.versionName}.apk"
+            outputFileName = "asremis-patagoniaTraslados-${variant.name}-${variant.versionName}.apk"
         }
     }
 }
